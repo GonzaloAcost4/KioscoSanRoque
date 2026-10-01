@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#d6d0d2">
-  <meta name="description" content="Kiosco San Roque en Padre Cerqueira 362, Resistencia. Alimentos, bebidas, golosinas, fotocopias, impresiones, anillados y más. Encontrá el local y cómo llegar.">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="description" content="Kiosco San Roque en Padre Cerqueira 362, Resistencia, Chaco. Kiosco, fotocopias, impresiones, anillados, bebidas frías y recarga de SUBE.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
-  <meta property="og:title" content="Kiosco San Roque | Resistencia, Chaco">
-  <meta property="og:description" content="Tu kiosco de Padre Cerqueira 362: algo rico para llevar y soluciones para todos los días.">
+  <meta property="og:title" content="Kiosco San Roque — Resistencia, Chaco">
+  <meta property="og:description" content="Tu parada de todos los días: impresiones, algo rico y recargas en el barrio.">
   <meta property="og:image" content="assets/fachada-principal.png">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b83832'/%3E%3Cpath d='M11 13h42v38H11z' fill='%23f8edda'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-weight='900' font-size='36' fill='%23b83832'%3EK%3C/text%3E%3C/svg%3E">
-  <title>Kiosco San Roque | Resistencia, Chaco</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='32' fill='%23f59e0b'%3EK%3C/text%3E%3C/svg%3E">
+  <title>Kiosco San Roque — Resistencia, Chaco</title>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -19,7 +19,7 @@
     "@type": "ConvenienceStore",
     "name": "Kiosco San Roque",
     "alternateName": "Kiosko San Roque",
-    "description": "Kiosco y servicios de fotocopias, impresiones, anillados, plastificados y recargas.",
+    "description": "Kiosco de cercanía y centro de copiado con fotocopias, impresiones, anillados y recarga de SUBE en Resistencia.",
     "telephone": "+54 362 427-5540",
     "address": {
       "@type": "PostalAddress",
@@ -30,94 +30,543 @@
       "addressCountry": "AR"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": -27.4450955, "longitude": -58.9995495 },
-    "hasMap": "https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA",
-    "sameAs": "https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA"
+    "hasMap": "https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA"
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Header transparente flotante con glassmorphism -->
   <header class="site-header">
-    <div class="header-inner wrap">
-      <a class="mini-brand" href="#inicio" aria-label="Kiosco San Roque, ir al inicio"><span>KIOSCO</span><strong>San Roque</strong></a>
-      <nav aria-label="Navegación principal">
-        <a href="#servicios">Qué encontrás</a>
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Kiosco San Roque, inicio">
+        <span class="brand-logo-text">Kiosco San Roque</span>
+        <span class="brand-sub">Padre Cerqueira 362 · Resistencia</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#libreria">Librería & Copiado</a>
+        <a href="#servicios">Kiosco & Servicios</a>
         <a href="#local">El local</a>
-        <a href="#ubicacion">Cómo llegar</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#preguntas">Preguntas</a>
       </nav>
-      <a class="header-cta" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Abrir en Maps <span aria-hidden="true">↗</span></a>
+
+      <div class="header-action">
+        <a class="btn btn-header-map" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">
+          <img src="assets/icon-maps.png" alt="Google Maps" class="header-mini-icon">
+          <span>Cómo llegar ↗</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="contenido">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Padre Cerqueira 362 · Resistencia, Chaco</span>
-          <p class="hero-kicker">EL KIOSCO DE TODOS LOS DÍAS</p>
-          <h1 id="hero-title"><span class="hero-kiosco">KIOSCO</span><span class="hero-roque">San Roque</span></h1>
-          <p class="hero-lead">Algo rico, algo que falta, una copia para salir del paso. Todo en una parada cerca de vos.</p>
-          <div class="hero-actions">
-            <a class="button button-red" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="#servicios">Ver qué ofrecemos</a>
+    <!-- HERO FULL IMAGE (Estilo Devlights: Gran fotografía inmersiva de fachada, oscurecida con tipografía impactante en blanco y amarillo cálido) -->
+    <section class="hero-fullimage" id="inicio">
+      <div class="hero-bg-overlay"></div>
+      <img class="hero-bg-img" src="assets/fachada-principal.png" alt="Fachada de Kiosco San Roque sobre calle Padre Cerqueira 362" fetchpriority="high">
+      
+      <div class="wrap hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Abierto al público · Padre Cerqueira 362, Resistencia</span>
+        </div>
+
+        <h1 class="hero-title">
+          Tu parada de confianza<br>
+          <span class="title-highlight">en cada momento del día.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Librería escolar y comercial, centro de copiado e impresiones al paso, bebidas heladas, golosinas y recarga de SUBE. Resolvé tus pendientes en un solo lugar de barrio.
+        </p>
+
+        <!-- 3 Íconos oficiales reconocibles al instante en la pantalla inicial -->
+        <div class="hero-actions">
+          <a class="hero-app-btn hero-app-maps" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-maps.png" alt="Google Maps" class="app-icon">
+            <span>Cómo llegar · Maps ↗</span>
+          </a>
+          <a class="hero-app-btn hero-app-whatsapp" href="https://wa.me/5493624275540?text=Hola!%20Te%20escribo%20desde%20la%20p%C3%A1gina%20web%20del%20Kiosco%20San%20Roque" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="app-icon">
+            <span>Comunicate por WhatsApp</span>
+          </a>
+          <a class="hero-app-btn hero-app-instagram" href="https://www.instagram.com/kioscosanroque" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-instagram.png" alt="Instagram" class="app-icon">
+            <span>Instagram @kioscosanroque ↗</span>
+          </a>
+        </div>
+
+        <!-- Barra flotante de datos rápidos sobre la imagen (3 columnas limpias y equilibradas) -->
+        <div class="hero-stats-bar">
+          <div class="stat-col">
+            <span class="stat-num">4.2★</span>
+            <span class="stat-text">En Google Maps</span>
           </div>
-          <p class="hero-note">Encontranos como <strong>“Kiosko San Roque”</strong> en Google Maps.</p>
-        </div>
-        <div class="hero-visual">
-          <figure class="hero-photo">
-            <img src="assets/fachada-principal.png" alt="Fachada de Kiosco San Roque con su cartel blanco, letras rojas y listas amarillas de productos y servicios" width="631" height="661" fetchpriority="high">
-            <figcaption>El cartel que ya conocés, sobre Padre Cerqueira.</figcaption>
-          </figure>
+          <div class="stat-col">
+            <span class="stat-num">Sin filas</span>
+            <span class="stat-text">Atención ágil al paso</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-num">Multi-pago</span>
+            <span class="stat-text">Efectivo, QR y Transferencias</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="services section" id="servicios" aria-labelledby="services-title">
+    <!-- TRUST STRIP (Servicios rápidos con píldoras pulidas) -->
+    <section class="ticker-strip">
+      <div class="wrap ticker-flex">
+        <span class="ticker-label">RESOLVEMOS EN EL LOCAL:</span>
+        <div class="ticker-tags">
+          <span class="tag-chip">Fotocopias & Impresiones</span>
+          <span class="tag-chip">Anillados & Plastificados</span>
+          <span class="tag-chip">Librería Escolar & Comercial</span>
+          <span class="tag-chip">Trámites & Formularios</span>
+          <span class="tag-chip">Recarga de SUBE</span>
+          <span class="tag-chip">Bebidas Heladas & Kiosco</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LIBRERÍA & CENTRO DE COPIADO (Desarrollo completo con fotografías reales de alta calidad) -->
+    <section class="section section-libreria" id="libreria">
       <div class="wrap">
-        <div class="section-heading">
-          <div><p class="section-index">01 / LO QUE ENCONTRÁS</p><h2 id="services-title">Más que un <em>kiosco.</em></h2></div>
-          <p>Los clásicos de siempre y esos trámites rápidos que necesitás resolver cerca de casa.</p>
+        <div class="section-head">
+          <span class="eyebrow">CENTRO DE COPIADO & PAPELERÍA</span>
+          <h2>Librería completa y copiado al paso</h2>
+          <div class="head-rule"></div>
+          <p class="section-subtitle">
+            El corazón de Kiosco San Roque: equipados para resolver desde una fotocopia urgente o apuntes universitarios anillados, hasta la lista escolar y trámites online con impresión inmediata.
+          </p>
         </div>
-        <div class="service-grid">
-          <article class="service-card service-card-food">
-            <div class="card-top"><span>01</span><span aria-hidden="true">✳</span></div>
-            <h3>Para llevar<br><span>y disfrutar</span></h3>
-            <ul><li>Alimentos</li><li>Bebidas y gaseosas</li><li>Golosinas</li><li>Helados</li><li>Lácteos</li></ul>
-            <p>Un antojo, una merienda o lo que te faltó para el día.</p>
+
+        <!-- Grid de los 3 pilares principales de Librería con fotografías reales -->
+        <div class="libreria-grid">
+          <!-- Tarjeta 1: Impresiones y Fotocopias -->
+          <article class="libreria-card">
+            <div class="libreria-card-media">
+              <img src="assets/libreria-impresiones.jpg" alt="Centro de impresiones y copiado de apuntes en Kiosco San Roque" loading="lazy">
+              <span class="libreria-card-tag">A4 & Oficio · Color y B&N</span>
+            </div>
+            <div class="libreria-card-body">
+              <div class="card-kicker">01 · IMPRESIONES & FOTOCOPIAS</div>
+              <h3>Impresión de apuntes y documentos</h3>
+              <p>Copiado nítido y de alta definición para estudiantes de la UNNE, UTN, profesorados y colegios. Traé tu archivo en pendrive o mandalo previamente por WhatsApp.</p>
+              
+              <ul class="libreria-features">
+                <li><span class="check-bullet">✓</span> Impresión blanco y negro y color nítido</li>
+                <li><span class="check-bullet">✓</span> Doble faz económica para apuntes extensos</li>
+                <li><span class="check-bullet">✓</span> Papel obra blanco de 75g y 80g de alta calidad</li>
+                <li><span class="check-bullet">✓</span> Formatos estándar A4, Legal y Oficio</li>
+              </ul>
+            </div>
           </article>
-          <article class="service-card service-card-print">
-            <div class="card-top"><span>02</span><span aria-hidden="true">▧</span></div>
-            <h3>Copias<br><span>y papeles</span></h3>
-            <ul><li>Fotocopias</li><li>Impresiones</li><li>Anillados</li><li>Plastificados</li></ul>
-            <p>Soluciones prácticas para tus apuntes y documentos.</p>
+
+          <!-- Tarjeta 2: Artículos de Librería Escolar y Comercial -->
+          <article class="libreria-card">
+            <div class="libreria-card-media">
+              <img src="assets/libreria-articulos.jpg" alt="Artículos de librería escolar, cuadernos Rivadavia y cartuchería" loading="lazy">
+              <span class="libreria-card-tag">Primeras Marcas · Todo el año</span>
+            </div>
+            <div class="libreria-card-body">
+              <div class="card-kicker">02 · LIBRERÍA ESCOLAR & OFICINA</div>
+              <h3>Artículos escolares y de oficina</h3>
+              <p>Stock permanente de insumos esenciales para que no tengas que trasladarte hasta el centro. Cuadernos, repuestos de hojas, bolígrafos, resaltadores y útiles para tareas.</p>
+              
+              <ul class="libreria-features">
+                <li><span class="check-bullet">✓</span> Cuadernos Rivadavia y Éxito tapa dura y espiral</li>
+                <li><span class="check-bullet">✓</span> Repuestos de hojas N°3 y carpetas de dibujo N°5</li>
+                <li><span class="check-bullet">✓</span> Bolígrafos Bic, microfibras, lápices y gomas</li>
+                <li><span class="check-bullet">✓</span> Resaltadores pastel y fluo, reglas, tijeras y adhesivos</li>
+              </ul>
+            </div>
           </article>
-          <article class="service-card service-card-more">
-            <div class="card-top"><span>03</span><span aria-hidden="true">✦</span></div>
-            <h3>Un poco<br><span>de todo</span></h3>
-            <ul><li>Artículos de limpieza</li><li>Regalos</li><li>Cargas SUBE</li><li>Cargas virtuales</li></ul>
-            <p>Servicios y artículos útiles en una misma visita.</p>
+
+          <!-- Tarjeta 3: Anillados y Plastificados -->
+          <article class="libreria-card">
+            <div class="libreria-card-media">
+              <img src="assets/libreria-anillados.jpg" alt="Encuadernación con anillados y plastificados térmicos" loading="lazy">
+              <span class="libreria-card-tag">Terminación & Protección</span>
+            </div>
+            <div class="libreria-card-body">
+              <div class="card-kicker">03 · ENCUADERNACIÓN & PROTECCIÓN</div>
+              <h3>Anillados y plastificados térmicos</h3>
+              <p>Terminaciones resistentes y prolijas para cuidar tus apuntes y credenciales. Espirales plásticos reforzados con tapas protectoras y laminado en caliente al instante.</p>
+              
+              <ul class="libreria-features">
+                <li><span class="check-bullet">✓</span> Anillado con espirales plásticos y tapas cristal/opacas</li>
+                <li><span class="check-bullet">✓</span> Plastificado térmico al paso de carnets y DNI</li>
+                <li><span class="check-bullet">✓</span> Cuadernillos de cátedra, balances y proyectos</li>
+                <li><span class="check-bullet">✓</span> Protección contra humedad, líquidos y desgaste</li>
+              </ul>
+            </div>
           </article>
         </div>
-        <p class="service-footnote">Productos y servicios visibles en la cartelería del local. Consultá disponibilidad antes de acercarte.</p>
+
+        <!-- Banner Interactivo: ¿Cómo mandar tu archivo por WhatsApp? -->
+        <div class="whatsapp-order-card">
+          <div class="wa-order-header">
+            <div class="wa-order-badge">
+              <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="wa-icon-small">
+              <span>SERVICIO ÁGIL PARA ESTUDIANTES Y VECINOS</span>
+            </div>
+            <h3>Imprimí sin esperar: Mandanos tu archivo por WhatsApp</h3>
+            <p>Ahorrá tiempo valioso. Mandá tu archivo antes de salir de tu casa o de cursar, te lo imprimimos y pasás directo a retirarlo listo por Padre Cerqueira 362.</p>
+          </div>
+
+          <div class="wa-steps-grid">
+            <div class="wa-step">
+              <div class="step-num-badge">1</div>
+              <strong>Mandá tu documento</strong>
+              <p>Envianos el archivo PDF, Word o imagen por WhatsApp indicando qué necesitás.</p>
+            </div>
+            <div class="wa-step">
+              <div class="step-num-badge">2</div>
+              <strong>Indicá las opciones</strong>
+              <p>Aclarás si es B&N o Color, simple o doble faz, o si requiere anillado con tapas.</p>
+            </div>
+            <div class="wa-step">
+              <div class="step-num-badge">3</div>
+              <strong>Retirá en el mostrador</strong>
+              <p>Te confirmamos el costo, lo preparamos y pasás a retirarlo sin hacer fila.</p>
+            </div>
+          </div>
+
+          <div class="wa-order-action">
+            <a class="btn btn-whatsapp-order" href="https://wa.me/5493624275540?text=Hola!%20Quiero%20enviar%20un%20archivo%20para%20imprimir" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="app-icon-inline">
+              <span>Enviar archivo para imprimir por WhatsApp</span>
+            </a>
+            <span class="wa-order-note">Mostrador activo · Pagá en efectivo, QR o Mercado Pago</span>
+          </div>
+        </div>
+
+        <!-- Bloque de Trámites y Formularios Rápidos -->
+        <div class="tramites-block">
+          <div class="tramites-head">
+            <h4>¿Necesitás imprimir un trámite o constancia urgente?</h4>
+            <p>Descargamos e imprimimos en el momento lo que te soliciten para tus trámites:</p>
+          </div>
+          <div class="tramites-pills">
+            <span class="tramite-chip">📄 Constancia de CUIL / ANSES</span>
+            <span class="tramite-chip">🏥 Turnos médicos y turnos online</span>
+            <span class="tramite-chip">💡 Boletas de servicios (Secheep / Sameep)</span>
+            <span class="tramite-chip">💼 Currículum Vitae (CV)</span>
+            <span class="tramite-chip">🏛️ Formularios ATP Chaco / AFIP</span>
+            <span class="tramite-chip">🚗 Certificados de antecedentes y pólizas</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="local section" id="local" aria-labelledby="local-title">
-      <div class="wrap local-grid">
-        <div class="local-photo-wrap"><img src="assets/fachada-lateral.png" alt="Vista lateral del frente de Kiosco San Roque y su cartel de productos y servicios" width="772" height="580" loading="lazy"><span class="corner-label">PADRE CERQUEIRA 362 · RESISTENCIA</span></div>
-        <div class="local-copy"><p class="section-index">02 / EL LOCAL</p><h2 id="local-title">El de la<br><em>gran marquesina.</em></h2><p>Blanca, con “KIOSCO” en rojo y los servicios escritos a ambos lados: una fachada fácil de reconocer cuando llegás.</p><div class="review-card"><div class="review-top"><span class="review-score">4,2</span><span class="review-stars" aria-label="4,2 de 5 estrellas">★★★★<span>★</span></span></div><p>5 opiniones en Google Maps</p><blockquote>“Buena atención”</blockquote><cite>— Gabriel Alejandro Vicedo, reseña en Google Maps</cite><a href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Ver la ficha y las reseñas <span aria-hidden="true">↗</span></a></div></div>
+    <!-- SECTION: KIOSCO & SERVICIOS COMPLEMENTARIOS -->
+    <section class="section section-muted" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">KIOSCO & CERCANÍA</span>
+          <h2>Bebidas, refrigerios y recargas al paso</h2>
+          <div class="head-rule"></div>
+        </div>
+
+        <div class="services-cards-grid">
+          <!-- Card 1 -->
+          <article class="service-panel">
+            <div class="panel-num">01</div>
+            <div class="panel-icon">🥤</div>
+            <h3>Bebidas heladas y refrigerios</h3>
+            <p>Heladeras a temperatura óptima para el calor chaqueño: gaseosas de primeras líneas, aguas saborizadas y minerales, jugos, lácteos y helados.</p>
+            <ul class="panel-features">
+              <li>Gaseosas de primeras marcas</li>
+              <li>Aguas y bebidas energizantes</li>
+              <li>Lácteos y helados al paso</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-panel">
+            <div class="panel-num">02</div>
+            <div class="panel-icon">🍫</div>
+            <h3>Golosinas, alfajores y snacks</h3>
+            <p>Variedad para el recreo o el corte de la tarde: alfajores triples y clásicos, chocolates, galletitas dulces y saladas, caramelos y snacks crocantes.</p>
+            <ul class="panel-features">
+              <li>Alfajores y chocolates surtidos</li>
+              <li>Galletitas dulces y saladas</li>
+              <li>Snacks y papas fritas</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-panel">
+            <div class="panel-num">03</div>
+            <div class="panel-icon">⚡</div>
+            <h3>Terminal SUBE y recargas virtuales</h3>
+            <p>Terminal activa para consultar y acreditar saldo en tu tarjeta SUBE, además de recargas para telefonía móvil (Personal, Movistar, Claro) y DirecTV.</p>
+            <ul class="panel-features">
+              <li>Acreditación de saldo SUBE</li>
+              <li>Recargas de celular al instante</li>
+              <li>Pago rápido con QR y efectivo</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="visit section" id="ubicacion" aria-labelledby="visit-title">
-      <div class="wrap visit-grid">
-        <div><p class="section-index">03 / VENÍ A VISITARNOS</p><h2 id="visit-title">Te esperamos<br>en <em>Resistencia.</em></h2><p>Estamos en Padre Cerqueira 362, Resistencia, Chaco. Abrí la ubicación en Google Maps para ver el recorrido desde donde estés.</p><div class="visit-actions"><a class="button button-dark" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Ver ubicación exacta <span aria-hidden="true">↗</span></a><a class="phone-link" href="tel:+543624275540">Llamar: 0362 427-5540</a></div><p class="hours-note">Los horarios pueden cambiar. Consultá la ficha de Google Maps antes de ir.</p></div>
-        <div class="address-card" aria-label="Dirección del kiosco"><span class="address-pin" aria-hidden="true">⌖</span><span class="address-label">NOS ENCONTRÁS EN</span><strong>Padre<br>Cerqueira <em>362</em></strong><span>H3500 Resistencia<br>Chaco, Argentina</span><div class="address-rule"></div><a href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Abrir el mapa <span aria-hidden="true">↗</span></a></div>
+    <!-- SECTION: EL LOCAL (Fotografía lateral y ficha de datos) -->
+    <section class="section" id="local">
+      <div class="wrap local-container">
+        <div class="local-media">
+          <div class="image-frame">
+            <img src="assets/fachada-lateral.png" alt="Frente y entrada de Kiosco San Roque" width="772" height="580" loading="lazy">
+            <div class="frame-tag">
+              <strong>Padre Cerqueira 362</strong>
+              <span>Resistencia, Chaco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="local-info">
+          <span class="eyebrow">EL COMERCIO</span>
+          <h2>Un espacio de cercanía donde ya nos conocés.</h2>
+          <div class="head-rule"></div>
+          <p class="lead-text">
+            Estamos situados sobre Padre Cerqueira 362, con mostrador a la calle para una atención directa y sin pérdidas de tiempo.
+          </p>
+
+          <div class="info-checklist">
+            <div class="check-item">
+              <span class="item-icon">📍</span>
+              <div>
+                <strong>Acceso cómodo y directo</strong>
+                <span>Estacionás o frenás un segundo en la vereda sin los problemas del centro.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="item-icon">💳</span>
+              <div>
+                <strong>Variedad en medios de pago</strong>
+                <span>Aceptamos efectivo, transferencias bancarias directas, Mercado Pago y QR.</span>
+              </div>
+            </div>
+            <div class="check-item">
+              <span class="item-icon">💬</span>
+              <div>
+                <strong>Consultas al instante</strong>
+                <span>Envianos un mensaje por WhatsApp para consultar disponibilidad o avisar antes de retirar.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="local-actions">
+            <a class="hero-app-btn hero-app-maps" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icon-maps.png" alt="Google Maps" class="app-icon">
+              <span>Abrir en Google Maps ↗</span>
+            </a>
+            <a class="hero-app-btn hero-app-whatsapp" href="https://wa.me/5493624275540?text=Hola!%20Quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="app-icon">
+              <span>Escribinos por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: COMPARATIVA / VENTAJAS (Estructura arquitectónica New House) -->
+    <section class="section section-muted" id="ventajas">
+      <div class="wrap">
+        <div class="section-head text-center">
+          <span class="eyebrow">VALOR PARA EL VECINO</span>
+          <h2>Por qué te conviene venir a Kiosco San Roque</h2>
+          <div class="head-rule margin-center"></div>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comp-card comp-highlight">
+            <div class="comp-badge">En Kiosco San Roque</div>
+            <h3>Tu parada integral</h3>
+            <ul class="comp-list">
+              <li>
+                <span class="sym-ok">✓</span>
+                <div>
+                  <strong>Todo en un solo viaje</strong>
+                  <p>Hacés tus fotocopias, anillás tus apuntes, recargás la SUBE y te llevás una bebida en minutos.</p>
+                </div>
+              </li>
+              <li>
+                <span class="sym-ok">✓</span>
+                <div>
+                  <strong>Atención de barrio y personalizada</strong>
+                  <p>Trato cordial, cercano y con la rapidez que necesitás.</p>
+                </div>
+              </li>
+              <li>
+                <span class="sym-ok">✓</span>
+                <div>
+                  <strong>Estacionamiento fácil al frente</strong>
+                  <p>Frenás en la vereda sin parquímetros ni demoras de tránsito.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comp-card comp-dimmed">
+            <div class="comp-badge-dim">La alternativa tradicional</div>
+            <h3>Recorrer lugares separados</h3>
+            <ul class="comp-list list-dimmed">
+              <li>
+                <span class="sym-no">✕</span>
+                <div>
+                  <strong>Múltiples traslados</strong>
+                  <p>Ir a una fotocopiadora céntrica y luego buscar otro local para recargar.</p>
+                </div>
+              </li>
+              <li>
+                <span class="sym-no">✕</span>
+                <div>
+                  <strong>Filas y esperas innecesarias</strong>
+                  <p>Tiempo perdido en locales congestionados.</p>
+                </div>
+              </li>
+              <li>
+                <span class="sym-no">✕</span>
+                <div>
+                  <strong>Complicaciones para estacionar</strong>
+                  <p>Zonas céntricas con tránsito denso y sin espacio para detenerse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FAQ (Acordeón sobrio y elegante) -->
+    <section class="section" id="preguntas">
+      <div class="wrap faq-block">
+        <div class="section-head text-center">
+          <span class="eyebrow">PREGUNTAS FRECUENTES</span>
+          <h2>Dudas habituales antes de acercarte</h2>
+          <div class="head-rule margin-center"></div>
+        </div>
+
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary>
+              <span>¿Cómo puedo mandar apuntes o archivos para imprimir por WhatsApp?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Es muy sencillo: nos escribís por WhatsApp al <strong>0362 427-5540</strong>, nos adjuntás el archivo en formato PDF, Word o imagen, e indicás si lo querés simple o doble faz, blanco y negro o color, y si lleva anillado. Te confirmamos el total y cuando pasás por el local ya lo tenés listo para abonar y retirar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>¿Qué trabajos de librería y encuadernación realizan?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Realizamos impresiones y fotocopias nítidas blanco y negro y color en formatos A4 y Oficio, anillados con espirales plásticos reforzados y tapas transparentes u opacas, y plastificado térmico en caliente de DNI, carnets, certificados y documentos.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>¿Cuentan con artículos de librería escolar y comercial?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Sí, disponemos de cuadernos Rivadavia y Éxito, repuestos de hojas rayadas y cuadriculadas N°3, carpetas de dibujo N°5, bolígrafos, lápices, resaltadores pastel y fluo, adhesivos, reglas, tijeras, cartulinas y afiches durante todo el año.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>¿Tienen recarga de tarjeta SUBE disponible?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Sí, contamos con terminal activa para la recarga y acreditación de saldo en tarjetas SUBE y cargas virtuales para todas las compañías de telefonía móvil.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>¿Cuáles son los medios de pago aceptados?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Podés abonar en efectivo, transferencias bancarias directas, Mercado Pago y cobro con código QR para tu mayor comodidad.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>¿Dónde está ubicado exactamente el local?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Estamos ubicados en <strong>Padre Cerqueira 362</strong>, Resistencia, Chaco. Podés usar los botones de "Cómo llegar" para abrir la ubicación directa en Google Maps.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL BANNER (Inspirado en la calidez y solidez de New House) -->
+    <section class="final-banner">
+      <div class="wrap banner-content">
+        <span class="banner-tag">PADRE CERQUEIRA 362 · RESISTENCIA</span>
+        <h2>Te esperamos hoy en Kiosco San Roque.</h2>
+        <p>Vení a resolver tus compras, trámites de impresión o recargas en un solo paso.</p>
+        <div class="banner-buttons">
+          <a class="hero-app-btn hero-app-maps" href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-maps.png" alt="Google Maps" class="app-icon">
+            <span>Abrir en Google Maps ↗</span>
+          </a>
+          <a class="hero-app-btn hero-app-whatsapp" href="https://wa.me/5493624275540?text=Hola!%20Te%20escribo%20desde%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="app-icon">
+            <span>Comunicate por WhatsApp</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner"><a href="#inicio" class="footer-brand">KIOSCO <span>San Roque</span></a><p>Padre Cerqueira 362, Resistencia.</p><a href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer">Google Maps ↗</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Kiosco San Roque</span><span>Hecho para encontrarnos más fácil.</span></div></footer>
+  <!-- FOOTER LIMPIO Y ELEGANTE -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand-box">
+        <strong>Kiosco San Roque</strong>
+        <p>Padre Cerqueira 362, H3500 Resistencia, Chaco.</p>
+        <span class="footer-note">Librería Escolar & Comercial · Centro de Copiado · Kiosco & SUBE</span>
+      </div>
+
+      <div class="footer-links-box">
+        <a href="https://maps.app.goo.gl/kfWJfDz9eqeQHQMLA" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          <img src="assets/icon-maps.png" alt="Google Maps" class="footer-mini-icon">
+          <span>Ubicación en Google Maps ↗</span>
+        </a>
+        <a href="https://wa.me/5493624275540" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="footer-mini-icon">
+          <span>WhatsApp: 0362 427-5540 ↗</span>
+        </a>
+        <a href="https://www.instagram.com/kioscosanroque" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          <img src="assets/icon-instagram.png" alt="Instagram" class="footer-mini-icon">
+          <span>Instagram @kioscosanroque ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom-line">
+      <span>© <span id="year">2026</span> Kiosco San Roque. Todos los derechos reservados.</span>
+      <span>Librería, Copiado & Kiosco de cercanía para el vecino.</span>
+    </div>
+  </footer>
+
   <script src="script.js" defer></script>
 </body>
 </html>
