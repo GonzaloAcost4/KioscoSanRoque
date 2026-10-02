@@ -142,15 +142,16 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* HERO FULL IMAGE (Estilo Devlights: 100vh o gran altura con imagen real de fondo oscurecida) */
-/* HERO FULL IMAGE (100vh completo con ticker fijado en la base del viewport) */
+/* HERO FULL IMAGE (100vh completo y centrado con imagen real de fondo oscurecida) */
 .hero-fullimage {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 75px;
+  justify-content: center;
+  padding-top: 85px;
+  padding-bottom: 50px;
   color: var(--text-white);
   overflow: hidden;
   background-color: var(--bg-dark);
@@ -196,6 +197,36 @@ a { color: inherit; text-decoration: none; }
   padding: 12px 0;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 14px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-badge .badge-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
 .hero-title {
   font-family: var(--font-heading);
   font-size: clamp(2.1rem, 3.8vw, 3.4rem);
@@ -214,16 +245,41 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.05rem;
   line-height: 1.55;
   color: #cbd5e1;
-  max-width: 650px;
+  max-width: 660px;
   margin-bottom: 22px;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 22px;
+}
+
+.hero-whatsapp-main {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.hero-cta-helper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.55);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-cta-helper svg {
+  color: #fbbf24;
+  flex-shrink: 0;
 }
 
 /* BOTONES DE APPS OFICIALES (Google Maps, WhatsApp, Instagram) */
@@ -246,6 +302,23 @@ a { color: inherit; text-decoration: none; }
   height: 20px;
   object-fit: contain;
   flex-shrink: 0;
+}
+
+/* BOTÓN GLASS TRANSPARENTE (Estilo píldora traslúcida) */
+.hero-app-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.hero-app-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 /* Google Maps */
@@ -415,65 +488,9 @@ a { color: inherit; text-decoration: none; }
   display: none;
 }
 
-/* TICKER STRIP (Anclado a la base del hero en desktop) */
-.ticker-strip {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  background: rgba(6, 10, 18, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 9px 0;
-  color: #cbd5e1;
-  box-sizing: border-box;
-}
-
-.ticker-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.ticker-label {
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #94a3b8;
-  white-space: nowrap;
-}
-
-.ticker-tags {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag-chip {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 5px 13px;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #e2e8f0;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-.tag-chip:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.26);
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
 /* SECCIONES BASE (Estilo editorial New House) */
 .section {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 .section-muted {
@@ -493,7 +510,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section-head {
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 
 .section-head h2 {
@@ -649,15 +666,15 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.95rem;
 }
 
-/* BANNER DE PEDIDO POR WHATSAPP */
+/* BANNER DE PEDIDO POR WHATSAPP (Estilo limpio, integrado con la estética del sitio) */
 .whatsapp-order-card {
-  margin-top: 50px;
-  background: linear-gradient(135deg, #090e17 0%, #111827 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  padding: 42px 38px;
-  color: #ffffff;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 38px 34px;
+  color: var(--text-main);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
 }
 
 .wa-order-badge {
@@ -665,14 +682,14 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 8px;
   padding: 5px 14px;
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.35);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
   border-radius: 9999px;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #4ade80;
-  margin-bottom: 16px;
+  color: #166534;
+  margin-bottom: 14px;
 }
 
 .wa-icon-small {
@@ -683,65 +700,68 @@ a { color: inherit; text-decoration: none; }
 
 .wa-order-header h3 {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
   font-weight: 700;
+  color: var(--text-main);
   line-height: 1.25;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .wa-order-header p {
-  font-size: 0.98rem;
-  color: #cbd5e1;
+  font-size: 0.95rem;
+  color: var(--text-muted);
   max-width: 720px;
-  line-height: 1.65;
-  margin-bottom: 32px;
+  line-height: 1.6;
+  margin-bottom: 28px;
 }
 
 .wa-steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-bottom: 36px;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .wa-step {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px;
+  padding: 20px;
   transition: all 0.2s ease;
 }
 
 .wa-step:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
 }
 
 .step-num-badge {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: #25d366;
-  color: #090e17;
+  background: #16a34a;
+  color: #ffffff;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .wa-step strong {
   display: block;
-  font-size: 1rem;
-  color: #ffffff;
+  font-size: 0.98rem;
+  color: var(--text-main);
   margin-bottom: 6px;
 }
 
 .wa-step p {
   font-size: 0.86rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.55;
 }
 
@@ -749,62 +769,63 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 10px;
+  gap: 18px;
+  padding-top: 6px;
 }
 
 .btn-whatsapp-order {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 28px;
+  gap: 10px;
+  padding: 12px 24px;
   background-color: #25d366;
   color: #ffffff;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 700;
   border-radius: 9999px;
+  text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
 }
 
 .btn-whatsapp-order:hover {
   background-color: #20bd5a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
   color: #ffffff;
 }
 
 .app-icon-inline {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
 .wa-order-note {
   font-size: 0.84rem;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 /* BLOQUE DE TRÁMITES */
 .tramites-block {
-  margin-top: 36px;
+  margin-top: 32px;
   background: var(--bg-white);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 30px;
+  padding: 28px 30px;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.02);
 }
 
 .tramites-head h4 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 6px;
 }
 
 .tramites-head p {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 18px;
 }
@@ -816,21 +837,28 @@ a { color: inherit; text-decoration: none; }
 }
 
 .tramite-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: var(--bg-muted);
   border: 1px solid var(--border);
   border-radius: 9999px;
-  padding: 7px 16px;
+  padding: 8px 16px;
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-main);
-  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .tramite-chip:hover {
-  background: var(--accent-gold-light);
-  border-color: #fde68a;
-  color: #92400e;
-  transform: translateY(-1px);
+  background: #f0fdf4;
+  border-color: #86efac;
+  color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.16);
 }
 
 /* TARJETAS DE SERVICIOS (Estilo New House) */
@@ -997,99 +1025,194 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-/* GALERÍA DE PANADERÍA Y CAFETERÍA */
-.panaderia-showcase {
-  margin-bottom: 50px;
-}
-
-.panaderia-gallery {
+/* GALERÍA INTERACTIVA DE PANADERÍA Y CAFETERÍA (1 PANTALLA) */
+.panaderia-interactive-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 30px;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 24px;
 }
 
-.panaderia-card {
-  background: var(--bg-white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
-  transition: all 0.25s ease;
+.panaderia-visual-side {
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 
-.panaderia-card:hover {
-  transform: translateY(-4px);
-  border-color: #cbd5e1;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
-}
-
-.panaderia-card-media {
-  position: relative;
-  height: 190px;
+.panaderia-viewer {
+  height: 390px;
   width: 100%;
+  position: relative;
+  border-radius: 14px;
   overflow: hidden;
-  background-color: #e2e8f0;
+  background-color: #0f172a;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.panaderia-card-media img {
+#panaderia-featured-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.45s ease;
+  transition: opacity 0.2s ease, transform 0.4s ease;
 }
 
-.panaderia-card:hover .panaderia-card-media img {
-  transform: scale(1.05);
+.panaderia-gallery-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-.panaderia-card-tag {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(9, 14, 23, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  font-size: 0.72rem;
+.gallery-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  color: var(--text-main);
+  font-size: 1.1rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
-.panaderia-card-body {
-  padding: 20px;
+.gallery-nav-btn:hover {
+  background: var(--text-main);
+  color: #ffffff;
+  border-color: var(--text-main);
+  transform: scale(1.08);
+}
+
+.gallery-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.gallery-dot.active {
+  background: var(--accent-gold);
+  width: 24px;
+  border-radius: 9999px;
+}
+
+/* Columna Derecha de Tabs */
+.panaderia-selector-side {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+.panaderia-tabs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panaderia-tab-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.panaderia-tab-item:hover {
+  border-color: #94a3b8;
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.panaderia-tab-item.active {
+  border-color: var(--accent-gold);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.12);
+  transform: translateX(6px);
+  border-left: 4px solid var(--accent-gold);
+}
+
+.tab-icon {
+  font-size: 1.45rem;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tab-info {
   flex-grow: 1;
 }
 
-.panaderia-kicker {
-  font-size: 0.7rem;
+.tab-kicker {
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   color: var(--accent-gold);
-  margin-bottom: 6px;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
-.panaderia-card-body h3 {
+.tab-info h4 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
-  line-height: 1.3;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
+  line-height: 1.25;
 }
 
-.panaderia-card-body p {
-  font-size: 0.88rem;
+.tab-info p {
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.55;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.panaderia-action-wrap {
+  margin-top: 2px;
+}
+
+.btn-whatsapp-panaderia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 22px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.94rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp-panaderia:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45);
+  color: #ffffff;
 }
 
 /* PARADA IDEAL CARDS (Campos específicos de conveniencia) */
@@ -1412,7 +1535,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .banner-content {
-  max-width: 760px;
+  max-width: 860px;
 }
 
 .banner-tag {
@@ -1539,8 +1662,12 @@ a { color: inherit; text-decoration: none; }
   .services-cards-grid {
     grid-template-columns: 1fr;
   }
-  .panaderia-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .panaderia-interactive-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .panaderia-viewer {
+    height: 320px;
   }
   .local-container {
     grid-template-columns: 1fr;
@@ -1580,10 +1707,16 @@ a { color: inherit; text-decoration: none; }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
   }
   .hero-app-btn {
     justify-content: center;
     width: 100%;
+  }
+  .hero-cta-helper {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
   }
   .hero-stats-bar {
     grid-template-columns: 1fr;
@@ -1603,22 +1736,21 @@ a { color: inherit; text-decoration: none; }
   .parada-card {
     padding: 26px 20px;
   }
-  .panaderia-gallery {
-    grid-template-columns: 1fr;
+  .panaderia-viewer {
+    height: 240px;
   }
-  .panaderia-showcase {
-    gap: 32px;
+  .panaderia-tab-item {
+    padding: 11px 14px;
+    gap: 10px;
+  }
+  .tab-icon {
+    font-size: 1.25rem;
   }
   .dueno-card-media {
     height: 240px;
   }
   .dueno-card-body {
     padding: 24px 20px;
-  }
-  .ticker-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
   }
   .whatsapp-order-card {
     padding: 28px 20px;
