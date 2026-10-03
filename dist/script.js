@@ -82,3 +82,79 @@ if (panaderiaNext) {
 panaderiaDots.forEach((dot, index) => {
   dot.addEventListener('click', () => setPanaderiaActive(index));
 });
+
+// ScrollSpy: Detecta la sección visible y actualiza el chip/link activo en la barra superior
+const navLinks = document.querySelectorAll('.site-nav a');
+const navContainer = document.querySelector('.site-nav');
+const sections = [];
+
+navLinks.forEach((link) => {
+  const href = link.getAttribute('href');
+  if (href && href.startsWith('#')) {
+    const section = document.querySelector(href);
+    if (section) {
+      sections.push({ el: section, link: link });
+    }
+  }
+});
+
+function updateActiveSection() {
+  const scrollPosition = window.scrollY + 140; // compensación del header
+  let currentActive = null;
+
+  for (let i = 0; i < sections.length; i++) {
+    const sec = sections[i];
+    const top = sec.el.offsetTop;
+    const height = sec.el.offsetHeight;
+    if (scrollPosition >= top && scrollPosition < top + height) {
+      currentActive = sec;
+      break;
+    }
+  }
+
+  // Si estamos muy arriba (hero o inicio), podemos no tener activa o tener la primera si está dentro
+  navLinks.forEach((l) => l.classList.remove('nav-active'));
+
+  if (currentActive) {
+    currentActive.link.classList.add('nav-active');
+  }
+}
+
+window.addEventListener('scroll', updateActiveSection, { passive: true });
+window.addEventListener('resize', updateActiveSection, { passive: true });
+updateActiveSection();
+
+// Control del Menú Hamburguesa en Móvil (3 barritas)
+const menuToggle = document.getElementById('menu-toggle');
+const siteNav = document.getElementById('site-nav');
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-active', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Cerrar el menú al tocar cualquier link
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (siteNav.classList.contains('is-open')) {
+        siteNav.classList.remove('is-open');
+        menuToggle.classList.remove('is-active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Cerrar al hacer click fuera del header
+  document.addEventListener('click', (e) => {
+    if (!siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
+      if (siteNav.classList.contains('is-open')) {
+        siteNav.classList.remove('is-open');
+        menuToggle.classList.remove('is-active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+}
+

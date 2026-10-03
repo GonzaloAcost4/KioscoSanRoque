@@ -12,7 +12,7 @@
   <meta property="og:image" content="assets/fachada-principal.png">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='32' fill='%23f59e0b'%3EK%3C/text%3E%3C/svg%3E">
   <title>Kiosco San Roque — Resistencia, Chaco</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +45,14 @@
         <span class="brand-sub">Padre Cerqueira 362 · Resistencia</span>
       </a>
 
-      <nav class="site-nav" aria-label="Navegación principal">
+      <!-- Botón de 3 barritas (Hamburguesa) para móvil -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
         <a href="#libreria">Librería</a>
         <a href="#servicios">Kiosco</a>
         <a href="#panaderia">Café & Panadería</a>
@@ -69,7 +76,7 @@
         </h1>
 
         <p class="hero-lead">
-          Desde el café al paso con chipá caliente para arrancar la mañana, hasta las fotocopias de último momento, los útiles para el colegio y la recarga de tu SUBE. Encontrá todo lo que necesitás al paso, atendido por Lorenzo y Mabel con la calidez de siempre.
+          Somos Lorenzo y Mabel, y hace más de treinta años atendemos este mostrador a la vuelta del Colegio San Roque. Acá arrancás la mañana con un café y un chipá recién salido del horno, y seguís con las fotocopias que te corren, el anillado del apunte, la lista de útiles o la carga de la SUBE. A la tarde te esperan la gaseosa bien helada, los alfajores y las mesas de la vereda, y todo lo que tengas que imprimir lo podés mandar por WhatsApp y pasar a buscar.
         </p>
 
         <!-- Canales de contacto directos con estilo transparente glassmorphic -->
@@ -87,16 +94,16 @@
         <!-- Barra flotante de datos de confianza (3 columnas limpias y equilibradas) -->
         <div class="hero-stats-bar">
           <div class="stat-col">
-            <span class="stat-num">+30 años</span>
-            <span class="stat-text">De historia en el barrio</span>
+            <span class="stat-num">Librería y copiado</span>
+            <span class="stat-text">Fotocopias, impresiones, anillados, plastificados y útiles</span>
           </div>
           <div class="stat-col">
-            <span class="stat-num">Generaciones</span>
-            <span class="stat-text">De alumnos y vecinos que nos eligen</span>
+            <span class="stat-num">Café y panadería</span>
+            <span class="stat-text">Café al paso, chipá, medialunas y pebetes del día</span>
           </div>
           <div class="stat-col">
-            <span class="stat-num">Atención propia</span>
-            <span class="stat-text">La calidez y dedicación de sus dueños</span>
+            <span class="stat-num">Kiosco y SUBE</span>
+            <span class="stat-text">Bebidas frías, golosinas, recargas y cargas de SUBE</span>
           </div>
         </div>
       </div>
@@ -110,7 +117,7 @@
           <h2>Librería completa y copiado al paso</h2>
           <div class="head-rule margin-center"></div>
           <p class="section-subtitle margin-center">
-            El corazón de Kiosco San Roque: más de 30 años acompañando a los alumnos y profesores del Colegio San Roque. Equipados para resolver desde una fotocopia urgente o apuntes anillados, hasta la lista escolar y trámites con impresión inmediata.
+            Empezamos con una fotocopiadora y la lista de útiles de los chicos del Colegio San Roque, y de ahí crecimos. Hoy seguimos resolviendo lo mismo: la copia que te falta para la clase de las ocho, el apunte para anillar antes del parcial o la carpeta que se olvidaron de comprar.
           </p>
         </div>
 
@@ -125,7 +132,7 @@
             <div class="libreria-card-body">
               <div class="card-kicker">01 · IMPRESIONES & FOTOCOPIAS</div>
               <h3>Impresión de apuntes y documentos</h3>
-              <p>Copiado nítido y de alta definición para estudiantes de la UNNE, UTN, profesorados y colegios. Traé tu archivo en pendrive o mandalo previamente por WhatsApp.</p>
+              <p>Imprimimos apuntes, tesis, planos y lo que traigas, para los estudiantes de la UNNE, la UTN, los profesorados y los colegios de la zona. Venís con el pendrive o lo mandás antes por WhatsApp, y si algo no sale bien lo repetimos sin vueltas.</p>
               
               <ul class="libreria-features">
                 <li><span class="check-bullet">✓</span> Impresión blanco y negro y color nítido</li>
@@ -145,7 +152,7 @@
             <div class="libreria-card-body">
               <div class="card-kicker">02 · LIBRERÍA ESCOLAR & OFICINA</div>
               <h3>Artículos escolares y de oficina</h3>
-              <p>Stock permanente de insumos esenciales para que no tengas que trasladarte hasta el centro. Cuadernos, repuestos de hojas, bolígrafos, resaltadores y útiles para tareas.</p>
+              <p>Tenemos lo que se necesita para arrancar las clases y para el resto del año: cuadernos, repuestos, birome, resaltadores y todo lo que suele faltar a último momento. Para que no tengas que ir hasta el centro por una goma o una carpeta.</p>
               
               <ul class="libreria-features">
                 <li><span class="check-bullet">✓</span> Cuadernos Rivadavia y Éxito tapa dura y espiral</li>
@@ -165,7 +172,7 @@
             <div class="libreria-card-body">
               <div class="card-kicker">03 · ENCUADERNACIÓN & PROTECCIÓN</div>
               <h3>Anillados y plastificados térmicos</h3>
-              <p>Terminaciones resistentes y prolijas para cuidar tus apuntes y credenciales. Espirales plásticos reforzados con tapas protectoras y laminado en caliente al instante.</p>
+              <p>Un apunte bien anillado dura todo el cuatrimestre, y un carnet o un DNI plastificado aguanta la billetera. Lo hacemos en el momento, mientras esperás, con espirales y tapas para que quede prolijo.</p>
               
               <ul class="libreria-features">
                 <li><span class="check-bullet">✓</span> Anillado con espirales plásticos y tapas cristal/opacas</li>
@@ -187,7 +194,7 @@
           <h2>Imprimí sin esperar y resolvé tus trámites</h2>
           <div class="head-rule margin-center"></div>
           <p class="section-subtitle margin-center">
-            Ahorrá tiempo valioso: mandás tu documento antes de salir de cursar o de casa, te lo tenemos impreso y pasás directo a retirarlo sin hacer fila.
+            Salís de casa o de la facultad con el archivo ya mandado, y cuando llegás al mostrador está impreso esperándote. Ahorrás la espera y nosotros ordenamos el trabajo.
           </p>
         </div>
 
@@ -199,24 +206,24 @@
               <span>SERVICIO ÁGIL PARA ESTUDIANTES Y VECINOS</span>
             </div>
             <h3>Mandanos tu archivo por WhatsApp y retiralo en minutos</h3>
-            <p>Atención directa por Lorenzo para copias simples, doble faz, color o apuntes universitarios anillados.</p>
+            <p>Lo recibe Lorenzo, que atiende el WhatsApp desde el mostrador: copias simples, doble faz, color o ese apunte que tiene que estar anillado para mañana.</p>
           </div>
 
           <div class="wa-steps-grid">
             <div class="wa-step">
               <div class="step-num-badge">1</div>
               <strong>Mandá tu documento</strong>
-              <p>Envianos el archivo PDF, Word o imagen por WhatsApp indicando qué necesitás.</p>
+              <p>PDF, Word o imagen, con una línea de lo que necesitás.</p>
             </div>
             <div class="wa-step">
               <div class="step-num-badge">2</div>
               <strong>Indicá las opciones</strong>
-              <p>Aclarás si es B&N o Color, simple o doble faz, o si requiere anillado con tapas.</p>
+              <p>B&N o color, simple o doble faz, con o sin anillado.</p>
             </div>
             <div class="wa-step">
               <div class="step-num-badge">3</div>
               <strong>Retirá en el mostrador</strong>
-              <p>Te confirmamos el costo, lo preparamos y pasás a retirarlo sin hacer fila.</p>
+              <p>Te pasamos el costo y, cuando llegás, ya está listo.</p>
             </div>
           </div>
 
@@ -225,7 +232,7 @@
               <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="app-icon-inline">
               <span>Enviar archivo para imprimir por WhatsApp</span>
             </a>
-            <span class="wa-order-note">Mostrador activo · Pagá en efectivo, QR o Mercado Pago</span>
+            <span class="wa-order-note">Pagás al retirar</span>
           </div>
         </div>
 
@@ -266,6 +273,9 @@
           <span class="eyebrow">KIOSCO & CERCANÍA</span>
           <h2>Bebidas, refrigerios y recargas al paso</h2>
           <div class="head-rule margin-center"></div>
+          <p class="section-subtitle margin-center">
+            El kiosco de siempre: entrás por una gaseosa y salís con la SUBE cargada, un alfajor para el recreo y la recarga del celular.
+          </p>
         </div>
 
         <div class="services-cards-grid">
@@ -319,7 +329,7 @@
           <h2>Panificados frescos y café al paso</h2>
           <div class="head-rule margin-center"></div>
           <p class="section-subtitle margin-center">
-            Horneados en el día por sus propios dueños. Seleccioná una especialidad para ver su elaboración y encargarla por WhatsApp:
+            Lo hornean ellos mismos todos los días, como en casa: el chipá con queso de verdad, las medialunas para el desayuno y los pebetes para el mediodía. Tocá una especialidad para verla y pedila por WhatsApp.
           </p>
         </div>
 
@@ -420,29 +430,29 @@
           <h2>Un espacio de cercanía donde ya nos conocés.</h2>
           <div class="head-rule"></div>
           <p class="lead-text">
-            Estamos situados sobre Padre Cerqueira 362, con mostrador a la calle para una atención directa y sin pérdidas de tiempo.
+            Un mostrador a la calle sobre Padre Cerqueira 362, donde entrás a pedir algo y terminás charlando un rato. Acá se conocen casi todos, y el que no, se hace conocido rápido.
           </p>
 
           <div class="info-checklist">
             <div class="check-item">
               <span class="item-icon">📍</span>
               <div>
-                <strong>Acceso cómodo y directo</strong>
-                <span>Estacionás o frenás un segundo en la vereda sin los problemas del centro.</span>
+                <strong>Fácil de parar</strong>
+                <span>Frenás un segundo en la vereda, sin el tránsito del centro.</span>
               </div>
             </div>
             <div class="check-item">
               <span class="item-icon">💳</span>
               <div>
-                <strong>Variedad en medios de pago</strong>
-                <span>Aceptamos efectivo, transferencias bancarias directas, Mercado Pago y QR.</span>
+                <strong>Pagás como quieras</strong>
+                <span>Efectivo, transferencia, Mercado Pago o QR.</span>
               </div>
             </div>
             <div class="check-item">
               <span class="item-icon">💬</span>
               <div>
-                <strong>Consultas al instante</strong>
-                <span>Envianos un mensaje por WhatsApp para consultar disponibilidad o avisar antes de retirar.</span>
+                <strong>Consultá antes de venir</strong>
+                <span>Preguntanos por WhatsApp si tenemos lo que buscás.</span>
               </div>
             </div>
           </div>
@@ -469,7 +479,7 @@
           <h2>Por qué somos tu parada ideal</h2>
           <div class="head-rule margin-center"></div>
           <p class="section-subtitle margin-center">
-            Pensado para que resuelvas tus necesidades de todos los días en un solo paso, con la atención cercana de sus dueños y sin las demoras del centro.
+            Cuatro cosas que la gente del barrio ya sabe de nosotros, y que seguimos cuidando todos los días como cuando abrimos.
           </p>
         </div>
 
@@ -482,7 +492,7 @@
             <div class="parada-kicker">01 · MULTISERVICIO</div>
             <h3>Todo en una sola parada</h3>
             <p>
-              Hacés tus fotocopias, anillás apuntes, recargás la tarjeta SUBE, te llevás un café con chipá calentito y tus compras de kiosco sin tener que recorrer locales separados.
+              Fotocopias, SUBE, un café y las compras del kiosco, sin andar de local en local.
             </p>
             <div class="parada-chip">
               <span>✓ Ahorro de tiempo</span>
@@ -495,9 +505,9 @@
               <span class="parada-icon">🤝</span>
             </div>
             <div class="parada-kicker">02 · TRATO CERCANO</div>
-            <h3>Atendido por sus dueños</h3>
+            <h3>Te atienden los dueños</h3>
             <p>
-              Lorenzo y Mabel te reciben cara a cara con la calidez del barrio. Sin intermediarios ni empleados desinteresados: te atienden quienes conocen y cuidan cada detalle.
+              Siempre hay alguien que te conoce y sabe qué estás buscando.
             </p>
             <div class="parada-chip">
               <span>✓ Confianza de barrio</span>
@@ -510,27 +520,27 @@
               <span class="parada-icon">🪑</span>
             </div>
             <div class="parada-kicker">03 · PUNTO DE ENCUENTRO</div>
-            <h3>Mesas y sobremesa con amigos</h3>
+            <h3>Mesas afuera para quedarte</h3>
             <p>
-              No todo es andar apurado: contamos con mesas y banquitos afuera para los chicos y vecinos que salen del colegio o terminan una actividad. El punto clásico para tomarse una Coca bien fría, comer algo rico, jugar al truco y compartir la tarde.
+              Hay mesas y banquitos en la vereda: una Coca bien fría, un truco y la tarde que se alarga después del colegio.
             </p>
             <div class="parada-chip">
               <span>✓ Espacio de encuentro</span>
             </div>
           </article>
 
-          <!-- Campo 4: Pedidos por WhatsApp -->
+          <!-- Campo 4: Cercanía -->
           <article class="parada-card">
             <div class="parada-icon-wrap">
-              <span class="parada-icon">💬</span>
+              <span class="parada-icon">🏃</span>
             </div>
-            <div class="parada-kicker">04 · CERO ESPERAS</div>
-            <h3>Mandás por WhatsApp y retirás</h3>
+            <div class="parada-kicker">04 · SIN VIAJES</div>
+            <h3>Resolvés entre clase y clase</h3>
             <p>
-              Nos enviás tus archivos en PDF o tu lista de fotocopias antes de salir de casa o del trabajo. Te confirmamos el costo y cuando pasás por el local ya está listo para abonar y llevar.
+              Estamos a metros del colegio: una copia de apuro o un útil que faltaba no te cuestan un viaje al centro.
             </p>
             <div class="parada-chip">
-              <span>✓ Listo para llevar</span>
+              <span>✓ A metros del colegio</span>
             </div>
           </article>
         </div>
@@ -545,26 +555,26 @@
           <h2>Detrás del mostrador, una historia de más de 30 años</h2>
           <div class="head-rule margin-center"></div>
           <p class="section-subtitle margin-center">
-            Kiosco San Roque nació hace más de tres décadas a la vuelta del Colegio San Roque. De esa cercanía nació nuestra papelería y centro de copiado, pero sobre todo un vínculo entrañable con generaciones de alumnos, profesores que confían en nosotros y vecinos que frecuentan el local todos los días. Aquellos chicos que venían con el uniforme por fotocopias de apuro o a merendar a la salida, hoy vuelven ya de grandes recordando con enorme cariño la calidez de Lorenzo y Mabel.
+            Abrimos a la vuelta del Colegio San Roque, cuando una fotocopia de apuro alcanzaba para empezar. El resto lo hicieron los clientes: alumnos, profesores y vecinos que fueron volviendo año tras año.
           </p>
         </div>
 
         <!-- 3 Pilares del negocio familiar -->
         <div class="nosotros-values-strip">
           <div class="nosotros-val-card">
-            <span class="val-icon">🤝</span>
-            <strong>Atención cara a cara</strong>
-            <p>Sin intermediarios ni demoras frías; Lorenzo y Mabel te atienden con la calidez y el conocimiento de toda una vida en el barrio.</p>
+            <span class="val-icon">🎒</span>
+            <strong>Del uniforme a la adultez</strong>
+            <p>Los chicos que venían a merendar a la salida hoy pasan por una copia o un café, y a veces traen a sus hijos.</p>
           </div>
           <div class="nosotros-val-card">
             <span class="val-icon">🏫</span>
-            <strong>Cuna escolar y barrial</strong>
-            <p>Más de 30 años acompañando a los alumnos y docentes del Colegio San Roque en cada ciclo lectivo, mapas y proyectos escolares.</p>
+            <strong>Pegados al colegio</strong>
+            <p>Mapas, carpetas y proyectos de último momento: sabemos qué se pide en cada ciclo lectivo.</p>
           </div>
           <div class="nosotros-val-card">
             <span class="val-icon">✨</span>
-            <strong>El paraje de siempre</strong>
-            <p>Un lugar donde encontrar desde la fotocopia urgente hasta la merienda recién horneada o la pausa para compartir entre amigos.</p>
+            <strong>Un punto de encuentro</strong>
+            <p>La parada entre clase y casa, con mesas afuera y siempre alguien conocido.</p>
           </div>
         </div>
       </div>
@@ -765,6 +775,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=4" defer></script>
 </body>
 </html>
